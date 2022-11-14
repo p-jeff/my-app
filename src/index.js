@@ -5,8 +5,12 @@ import "./styles.css"
 
 createRoot(document.getElementById("root")).render(
   <>
-    <Suspense fallback={null}>
+    <Suspense fallback={Loading}>
       <App />
     </Suspense>
   </>,
 )
+
+function Loading() {
+  return <h1>Loading</h1>
+}
